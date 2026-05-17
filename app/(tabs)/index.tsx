@@ -50,7 +50,10 @@ export default function Explore() {
 
   return (
     <View style={{ flex: 1, backgroundColor: theme.background }}>
-      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 120 }}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 120 }}
+      >
         <Animated.View entering={FadeInDown.duration(500)}>
           <LinearGradient
             colors={[theme.gradientStart, theme.gradientEnd]}
@@ -58,28 +61,45 @@ export default function Explore() {
             end={{ x: 1, y: 1 }}
             style={styles.hero}
           >
-            <SafeAreaView edges={['top']}>
+            <SafeAreaView edges={["top"]}>
               <View style={styles.heroBrand}>
                 <Sparkles size={18} color="#FFFFFF" />
-                <Text style={[typography.bodyStrong, { color: '#FFFFFF', marginLeft: 6 }]}>
-                  Травел-Планер
+                <Text
+                  style={[
+                    typography.bodyStrong,
+                    { color: "#FFFFFF", marginLeft: 6 },
+                  ]}
+                >
+                  {t("app.name")}
                 </Text>
               </View>
-              <Text style={[typography.h1, { color: '#FFFFFF', marginTop: spacing.lg }]}>
-                {t('explore.greeting', { name })}
+              <Text
+                style={[
+                  typography.h1,
+                  { color: "#FFFFFF", marginTop: spacing.lg },
+                ]}
+              >
+                {t("explore.greeting", { name })}
               </Text>
-              <Text style={[typography.body, { color: 'rgba(255,255,255,0.9)', marginTop: 4 }]}>
-                {t('explore.subgreeting')}
+              <Text
+                style={[
+                  typography.body,
+                  { color: "rgba(255,255,255,0.9)", marginTop: 4 },
+                ]}
+              >
+                {t("explore.subgreeting")}
               </Text>
 
               <Pressable
                 onPress={goSearch}
-                style={[styles.cta, shadows.lg, { backgroundColor: '#FFFFFF' }]}
+                style={[styles.cta, shadows.lg, { backgroundColor: "#FFFFFF" }]}
               >
-                <Text style={[typography.h3, { color: '#0F172A' }]}>
-                  {t('explore.planJourney')}
+                <Text style={[typography.h3, { color: "#0F172A" }]}>
+                  {t("explore.planJourney")}
                 </Text>
-                <View style={[styles.ctaIcon, { backgroundColor: theme.primary }]}>
+                <View
+                  style={[styles.ctaIcon, { backgroundColor: theme.primary }]}
+                >
                   <ArrowRight size={20} color="#FFFFFF" />
                 </View>
               </Pressable>
@@ -87,12 +107,20 @@ export default function Explore() {
           </LinearGradient>
         </Animated.View>
 
-        <Animated.View entering={FadeInUp.delay(150).duration(500)} style={{ paddingHorizontal: spacing.xl }}>
-          <SectionHeader title={t('explore.recent')} />
+        <Animated.View
+          entering={FadeInUp.delay(150).duration(500)}
+          style={{ paddingHorizontal: spacing.xl }}
+        >
+          <SectionHeader title={t("explore.recent")} />
           {recent.length === 0 ? (
             <Card variant="outlined" style={{ paddingVertical: spacing.lg }}>
-              <Text style={[typography.body, { color: theme.textMuted, textAlign: 'center' }]}>
-                {t('explore.noRecent')}
+              <Text
+                style={[
+                  typography.body,
+                  { color: theme.textMuted, textAlign: "center" },
+                ]}
+              >
+                {t("explore.noRecent")}
               </Text>
             </Card>
           ) : (
@@ -108,13 +136,20 @@ export default function Explore() {
                     style={[
                       styles.recentChip,
                       shadows.sm,
-                      { backgroundColor: theme.card, borderColor: theme.border },
+                      {
+                        backgroundColor: theme.card,
+                        borderColor: theme.border,
+                      },
                     ]}
                   >
-                    <Text style={[typography.bodyStrong, { color: theme.text }]}>
+                    <Text
+                      style={[typography.bodyStrong, { color: theme.text }]}
+                    >
                       {origin.name} → {dest.name}
                     </Text>
-                    <Text style={[typography.caption, { color: theme.textMuted }]}>
+                    <Text
+                      style={[typography.caption, { color: theme.textMuted }]}
+                    >
                       {new Date(r.ranAt).toLocaleDateString()}
                     </Text>
                   </Pressable>
@@ -124,13 +159,22 @@ export default function Explore() {
           )}
         </Animated.View>
 
-        <Animated.View entering={FadeInUp.delay(250).duration(500)} style={{ paddingHorizontal: spacing.xl }}>
-          <SectionHeader title={t('explore.inspiration')} />
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingRight: spacing.xl }}>
+        <Animated.View
+          entering={FadeInUp.delay(250).duration(500)}
+          style={{ paddingHorizontal: spacing.xl }}
+        >
+          <SectionHeader title={t("explore.inspiration")} />
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{ paddingRight: spacing.xl }}
+          >
             {inspirations.map((it) => (
               <Pressable
                 key={it.id}
-                onPress={() => launchInspiration(it.origin.id, it.destination.id)}
+                onPress={() =>
+                  launchInspiration(it.origin.id, it.destination.id)
+                }
                 style={[
                   styles.inspirationCard,
                   shadows.md,
@@ -149,11 +193,21 @@ export default function Explore() {
                   <Text style={[typography.h3, { color: theme.text }]}>
                     {it.origin.name} → {it.destination.name}
                   </Text>
-                  <Text style={[typography.caption, { color: theme.textMuted, marginTop: 2 }]}>
+                  <Text
+                    style={[
+                      typography.caption,
+                      { color: theme.textMuted, marginTop: 2 },
+                    ]}
+                  >
                     {it.note}
                   </Text>
-                  <Text style={[typography.bodyStrong, { color: theme.primary, marginTop: 6 }]}>
-                    {t('common.from_caption')} €{it.fromPrice}
+                  <Text
+                    style={[
+                      typography.bodyStrong,
+                      { color: theme.primary, marginTop: 6 },
+                    ]}
+                  >
+                    {t("common.from_caption")} €{it.fromPrice}
                   </Text>
                 </View>
               </Pressable>

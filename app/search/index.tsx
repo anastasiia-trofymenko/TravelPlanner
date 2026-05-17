@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useRouter } from 'expo-router';
 import {
   Calendar,
+  CalendarDays,
   Users,
   Search as SearchIcon,
   ArrowDownUp,
@@ -18,6 +19,7 @@ import { Card } from '@src/components/Card';
 import { Button } from '@src/components/Button';
 import { Slider } from '@src/components/Slider';
 import { Chip } from '@src/components/Chip';
+import { CalendarPicker } from '@src/components/CalendarPicker';
 import { ModeIcon } from '@src/components/ModeIcon';
 import { useTheme } from '@src/hooks/useTheme';
 import { useHaptic } from '@src/hooks/useHaptic';
@@ -44,6 +46,7 @@ export default function SearchScreen() {
   const setDraft = useSearchStore((s) => s.setDraft);
   const runSearch = useSearchStore((s) => s.runSearch);
   const [advancedOpen, setAdvancedOpen] = useState(!prefs.simpleMode);
+  const [calendarOpen, setCalendarOpen] = useState(false);
 
   const origin = draft.originId ? findCity(draft.originId) : undefined;
   const destination = draft.destinationId ? findCity(draft.destinationId) : undefined;
@@ -80,6 +83,15 @@ export default function SearchScreen() {
   const setDate = (offset: number) => {
     haptic.light();
     setDraft({ date: todayPlus(offset) });
+  };
+
+  const setExactDate = (iso: string) => {
+    setDraft({ date: iso });
+  };
+
+  const openCalendar = () => {
+    haptic.light();
+    setCalendarOpen(true);
   };
 
   return (
@@ -130,7 +142,7 @@ export default function SearchScreen() {
 
       <Animated.View entering={FadeInUp.delay(80).duration(350)}>
         <Card style={{ marginTop: spacing.md }}>
-          <View style={styles.field}>
+          <Pressable onPress={openCalendar} style={styles.field}>
             <View style={[styles.fieldIcon, { backgroundColor: theme.primary + '22' }]}>
               <Calendar size={16} color={theme.primary} />
             </View>
@@ -142,7 +154,10 @@ export default function SearchScreen() {
                 {formatLongDate(`${date}T08:00:00`)}
               </Text>
             </View>
-          </View>
+            <View style={[styles.calendarBtn, { borderColor: theme.border }]}>
+              <CalendarDays size={16} color={theme.primary} />
+            </View>
+          </Pressable>
           <View style={styles.datePillRow}>
             {[0, 1, 2, 3, 7, 14].map((o) => {
               const d = todayPlus(o);
@@ -159,9 +174,25 @@ export default function SearchScreen() {
                 </View>
               );
             })}
+            <View style={{ marginRight: spacing.sm, marginBottom: spacing.sm }}>
+              <Chip
+                label={t('search.pickDate')}
+                onPress={openCalendar}
+                size="sm"
+                icon={<CalendarDays size={12} color={theme.text} />}
+              />
+            </View>
           </View>
         </Card>
       </Animated.View>
+
+      <CalendarPicker
+        visible={calendarOpen}
+        selectedDate={date}
+        minDate={todayPlus(0)}
+        onClose={() => setCalendarOpen(false)}
+        onSelect={setExactDate}
+      />
 
       <Animated.View entering={FadeInUp.delay(150).duration(350)}>
         <Card style={{ marginTop: spacing.md }}>
@@ -313,6 +344,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     marginTop: spacing.md,
+  },
+  calendarBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   passengerRow: { flexDirection: 'row', alignItems: 'center' },
   stepperRow: { flexDirection: 'row' },

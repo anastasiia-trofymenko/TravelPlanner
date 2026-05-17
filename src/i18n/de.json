@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "Травел-Планер",
+    "name": "Travel Planner",
     "tagline": "Deine Reise, komplett geplant."
   },
   "tabs": {
@@ -85,7 +85,9 @@
     "swapRoute": "Tauschen",
     "locationsTitle": "Ort wählen",
     "locationsPlaceholder": "Stadt oder Bahnhof suchen",
-    "popular": "Beliebte Städte"
+    "popular": "Beliebte Städte",
+    "pickDate": "Datum wählen",
+    "calendarTitle": "Datum auswählen"
   },
   "results": {
     "title": "Gefundene Routen",
