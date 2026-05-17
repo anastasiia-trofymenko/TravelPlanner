@@ -145,14 +145,3 @@ The Best-Match scoring **directly responds to user feedback over time**: when a 
 | Danylo Prokhorenko | Profile screen + accessibility/simple mode, German localization, MyTrips + Active Trip + Feedback flow, mock data + route generator |
 
 (Reflects the planning split in M2 — each member owned the screens/features evolving their assigned persona.)
-
-### Transparenz zur KI-Nutzung
-
-In Übereinstimmung mit der Transparenzrichtlinie zur KI-Nutzung des Kurses dokumentieren wir folgende KI-Beiträge zu diesem Meilenstein:
-
-1. **Code-Generierung & Strukturierung:** Wir haben Claude (Anthropic) genutzt, um auf Basis unserer M1- (Personas, Task-Analyse, Konkurrenzanalyse) und M2-Deliverables (Low-Fi-Prototypen und Nutzerevaluationen) den High-Fi-Prototyp in React Native/Expo zu implementieren. Die KI hat insbesondere bei der Erstellung der TypeScript-Komponenten, des Mock-Routen-Generators, des Zustand-State-Managements und der i18n-Konfiguration unterstützt.
-2. **Designentscheidungen:** Die Persona-Feature-Mappings (welches M1-Persona welche M3-Funktion antreibt) und die Synthese der vier M2-Prototypen-Stärken in einer kohärenten App basieren auf der von unserem Team durchgeführten Nutzerevaluation. Die KI hat geholfen, diese bestehenden Entscheidungen klar und nachvollziehbar zu dokumentieren.
-3. **Übersetzung & Lokalisierung:** Die deutschsprachigen UI-Strings (`src/i18n/de.json`) wurden mit KI-Unterstützung übersetzt und vom Team auf inhaltliche Korrektheit überprüft.
-4. **Code-Review:** Die KI wurde verwendet, um Syntax- und Typfehler in TypeScript zu finden und zu beheben.
-
-Alle finalen Entscheidungen zu Funktionsumfang, Persona-Priorisierung, UX-Flows und User-Stories stammen aus den M1- und M2-Lieferobjekten unseres Teams. Die KI fungiert als Implementierungs- und Dokumentationshilfe, nicht als Quelle der konzeptionellen Entscheidungen.
