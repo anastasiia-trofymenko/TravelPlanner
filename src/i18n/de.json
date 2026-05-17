@@ -1,0 +1,227 @@
+{
+  "app": {
+    "name": "Травел-Планер",
+    "tagline": "Deine Reise, komplett geplant."
+  },
+  "tabs": {
+    "explore": "Entdecken",
+    "saved": "Gespeichert",
+    "trips": "Meine Reisen",
+    "profile": "Profil"
+  },
+  "common": {
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "continue": "Weiter",
+    "next": "Weiter",
+    "skip": "Überspringen",
+    "done": "Fertig",
+    "search": "Suchen",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "share": "Teilen",
+    "yes": "Ja",
+    "no": "Nein",
+    "passenger": "Reisende",
+    "passengers": "Reisende",
+    "from": "Von",
+    "to": "Nach",
+    "departure": "Abfahrt",
+    "arrival": "Ankunft",
+    "duration": "Dauer",
+    "price": "Preis",
+    "transfers": "Umstiege",
+    "transfer": "Umstieg",
+    "direct": "Direkt",
+    "total": "Gesamt",
+    "minutes": "Min",
+    "hours": "Std",
+    "from_caption": "ab"
+  },
+  "onboarding": {
+    "welcomeTitle": "Reisen ohne Chaos",
+    "welcomeSubtitle": "Züge, Busse, Flüge, Taxis — wir planen die ganze Route in einer App.",
+    "getStarted": "Los geht's",
+    "alreadyHave": "Erst umsehen",
+    "prefTitle": "Was ist dir wichtig?",
+    "prefSubtitle": "Schieb die Regler. Wir sortieren die Routen passend.",
+    "personalizeTitle": "Wähle deinen Reisestil",
+    "personalizeSubtitle": "Wir stellen die Voreinstellungen ein. Jederzeit änderbar.",
+    "styles": {
+      "eco": "Umweltbewusst",
+      "ecoDesc": "Niedrigster CO₂-Ausstoß, längere Routen OK",
+      "fast": "Zeit-fokussiert",
+      "fastDesc": "Schnelligkeit und Komfort über Preis",
+      "casual": "Entspannt",
+      "casualDesc": "Schnell etwas Gutes auswählen",
+      "simple": "Einfacher Modus",
+      "simpleDesc": "Größere Schrift, weniger Optionen"
+    },
+    "finish": "Planung starten"
+  },
+  "explore": {
+    "greeting": "Hallo, {{name}}!",
+    "subgreeting": "Wohin geht's?",
+    "planJourney": "Reise planen",
+    "recent": "Letzte Suchen",
+    "inspiration": "Inspiration",
+    "noRecent": "Deine letzten Suchen erscheinen hier."
+  },
+  "search": {
+    "title": "Reise planen",
+    "originPlaceholder": "Startort?",
+    "destinationPlaceholder": "Wohin?",
+    "datePlaceholder": "Wann?",
+    "passengersTitle": "Reisende",
+    "advanced": "Prioritäten anpassen",
+    "budget": "Budget",
+    "speed": "Geschwindigkeit",
+    "eco": "Umwelt",
+    "any": "egal",
+    "modes": "Transportmittel",
+    "searchButton": "Routen suchen",
+    "searching": "Suche läuft...",
+    "swapRoute": "Tauschen",
+    "locationsTitle": "Ort wählen",
+    "locationsPlaceholder": "Stadt oder Bahnhof suchen",
+    "popular": "Beliebte Städte"
+  },
+  "results": {
+    "title": "Gefundene Routen",
+    "found": "{{count}} Routen",
+    "sort": {
+      "best": "Beste Wahl",
+      "fastest": "Schnellste",
+      "cheapest": "Günstigste",
+      "eco": "Umweltfreundlich"
+    },
+    "badges": {
+      "fastest": "Schnellste",
+      "cheapest": "Günstigste",
+      "eco": "Eco-Wahl",
+      "best": "Beste Wahl",
+      "comfort": "Komfortabelste"
+    },
+    "compare": "Vergleichen",
+    "compareCount": "Vergleichen ({{count}})",
+    "stressFree": "Stressfrei",
+    "tight": "Knapper Umstieg",
+    "risky": "Riskanter Umstieg",
+    "viewDetails": "Details ansehen",
+    "compareTitle": "Routen vergleichen",
+    "removeFromCompare": "Entfernen",
+    "emptyTitle": "Keine passenden Routen",
+    "emptyBody": "Erweitere die Transportmittel oder senke die Geschwindigkeits-Priorität.",
+    "liveData": "Live-Fahrpläne · DB HAFAS",
+    "estimatedData": "Geschätzte Daten · keine Live-Verbindung"
+  },
+  "route": {
+    "title": "Routendetails",
+    "reliability": "Pünktlichkeit",
+    "co2Title": "CO₂-Bilanz",
+    "co2Body": "Diese Route verursacht {{kg}} kg CO₂ — {{pct}}% weniger als ein Flug.",
+    "co2BodyFlight": "Flugvariante verursacht {{kg}} kg CO₂ — erwäge eine grünere Route.",
+    "platform": "Gleis {{p}}",
+    "seat": "Sitz {{s}}",
+    "wifi": "WLAN",
+    "table": "Tischplatz",
+    "minTransfer": "{{m}} Min Umstieg",
+    "operator": "Anbieter",
+    "bookCta": "1-Klick buchen",
+    "totalPrice": "Gesamt"
+  },
+  "booking": {
+    "title": "Bezahlen",
+    "passengerInfo": "Reisende:r",
+    "payment": "Zahlungsmittel",
+    "breakdown": "Preisübersicht",
+    "applePay": "Apple Pay",
+    "googlePay": "Google Pay",
+    "card": "Karte •••• 4242",
+    "confirm": "Bestätigen & bezahlen",
+    "secureNote": "Alle Abschnitte werden als ein gemeinsames Ticket bezahlt. Keine Weiterleitungen.",
+    "successTitle": "Reise gebucht!",
+    "successBody": "Wir haben alles in 'Meine Reisen' gespeichert. Du bekommst Erinnerungen vor der Abfahrt.",
+    "viewTrip": "Reise ansehen",
+    "backHome": "Zurück zur Startseite"
+  },
+  "saved": {
+    "title": "Gespeichert",
+    "subtitle": "Deine Wunschliste & Inspiration",
+    "emptyTitle": "Noch nichts gespeichert",
+    "emptyBody": "Tippe auf das Herz, um eine Route zu speichern."
+  },
+  "trips": {
+    "title": "Meine Reisen",
+    "tabs": {
+      "upcoming": "Bevorstehend",
+      "active": "Aktiv",
+      "past": "Vergangen"
+    },
+    "departsIn": "Abfahrt in {{when}}",
+    "departed": "Abgefahren {{when}}",
+    "nowBoarding": "Einstieg",
+    "inTransit": "Unterwegs",
+    "completed": "Abgeschlossen",
+    "emptyUpcoming": "Keine geplanten Reisen. Plane eine!",
+    "emptyActive": "Aktuell keine aktive Reise.",
+    "emptyPast": "Vergangene Reisen erscheinen hier.",
+    "leaveFeedback": "Bewertung abgeben",
+    "viewLive": "Live ansehen"
+  },
+  "trip": {
+    "now": "Jetzt",
+    "nextTransfer": "Nächster Umstieg in {{m}} Min",
+    "onTime": "Pünktlich",
+    "delayed": "Verspätung {{m}} Min",
+    "notifyFriend": "Freund:in benachrichtigen",
+    "directions": "Wegweisung im Bahnhof"
+  },
+  "feedback": {
+    "title": "Wie war deine Reise?",
+    "rateBody": "Dein Feedback verbessert künftige Empfehlungen.",
+    "tags": {
+      "punctual": "Pünktlich",
+      "comfort": "Komfortabel",
+      "easyTransfer": "Einfache Umstiege",
+      "goodValue": "Gutes Preis-Leistungs-Verhältnis",
+      "eco": "Umweltfreundlich"
+    },
+    "commentLabel": "Sonst noch etwas? (optional)",
+    "submit": "Absenden",
+    "thanks": "Danke für dein Feedback!"
+  },
+  "profile": {
+    "title": "Profil",
+    "preferences": "Standard-Prioritäten",
+    "accessibility": "Barrierefreiheit",
+    "largeText": "Große Schrift",
+    "largeTextHint": "Größere Beschriftungen, besser lesbar.",
+    "simpleMode": "Einfacher Modus",
+    "simpleModeHint": "Erweiterte Filter ausblenden für einen fokussierten Ablauf.",
+    "language": "Sprache",
+    "languages": {
+      "en": "English",
+      "de": "Deutsch"
+    },
+    "modes": "Standard-Transportmittel",
+    "about": "Über & KI-Transparenz",
+    "aboutBody": "Arturio ist ein High-Fidelity-Prototyp für Meilenstein 3 des HCI-Kurses (Gruppe 4). Backend-Daten sind simuliert.\n\nKI-Transparenz: Claude (Anthropic) hat bei der Code-Generierung, strukturellen Planung und beim Verfassen der Texte auf Basis der von unserem Team erstellten M1- und M2-Lieferobjekte unterstützt."
+  },
+  "stress": {
+    "free": "Stressfrei",
+    "tight": "Knapp",
+    "risky": "Riskant"
+  },
+  "modes": {
+    "train": "Zug",
+    "bus": "Bus",
+    "flight": "Flug",
+    "subway": "U-Bahn",
+    "taxi": "Taxi",
+    "walk": "Gehen",
+    "tram": "Tram",
+    "ferry": "Fähre"
+  }
+}

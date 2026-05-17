@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Травел-Планер",
+    "slug": "arturio-travel-planner",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "arturio",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF3D7F"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gruppe4.arturio"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF3D7F"
+      },
+      "package": "com.gruppe4.arturio"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "50caaa57-c372-4c28-8e76-e827e7252e01"
+      }
+    },
+    "owner": "scape76"
+  }
+}
