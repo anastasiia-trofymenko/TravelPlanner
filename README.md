@@ -1,7 +1,6 @@
 ## Readme — M3 (Travel Planner)
 
 * **Gruppe:** 4
-* **Team-Nr.:** [TBD — fill before submission]
 * **Projektthema:** Travel Planner App — a high-fidelity, multimodal route-planning prototype that fuses train, bus, flight, subway, taxi, walking and ferry into a single door-to-door booking experience.
 
 ### Implementierung
