@@ -1,4 +1,4 @@
-## Readme — M3 (Arturio Travel Planner)
+## Readme — M3 (Travel Planner)
 
 * **Gruppe:** 4
 * **Team-Nr.:** [TBD — fill before submission]
